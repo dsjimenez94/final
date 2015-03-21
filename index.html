@@ -1,1 +1,120 @@
-hello world!
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Holistic Livings
+		</title>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' type='text/css' href="style.css">
+		<style type="text/css">
+
+		body { background-color: #CBB2E6;}
+		h1{
+			color:#660066;
+		}
+
+		  
+	 	#header {
+    background-color:#5C8533;
+    color:#660066;
+    text-align:center;
+    padding:2px;
+	}
+		#nav {
+    color:#F0F09D;
+    
+    float:center;
+    padding:5px; 
+}
+		#section {
+    width:350px;
+    float:left;
+    padding:15px; 
+}
+		#footer {
+    background-color:#5C8533;
+    color:#660066;
+    font-family:'Raleway',sans-serif, 50px;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+
+		#horizontal .slides {
+				border: solid 10px #660066;
+				width: 600px;
+				height: 300px;
+				overflow:hidden;
+
+				margin: 15px auto;
+			}
+			#horizontal .slides .drawer {
+				/*border:solid 2px blue;*/
+				width: 3000px;
+			}
+			#horizontal .slides .drawer img{
+				float:left;
+			}
+			</style>
+	</head>
+
+	<body>
+
+		<div id="header"> <h1 style="font-size: 50px; text-align:center; font-family: 'Raleway', sans-serif;"> Holistic Livings </h1>
+			<p style= "text-align:center; font-family: 'Raleway', sans-serif; Color: #F0F09D; Font-size: 20px"> Embracing natural healing and eating for the mind, body, and soul </p>
+		</div>
+
+		<div id="container">
+			<header id="masthead"><h1></h1></header>
+			<section id="horizontal">
+				<div class="slides">
+					<img src="images/oil.jpg" height="350" width="600" />
+					<img src="images/berry.jpg" height="350" width="600" />
+					<img src="images/lamp.jpg" height="350" width="600" />
+					<img src="images/kombucha.jpg" height="350" width="600" />
+					<img src="images/vinegar.jpg" height="350" width="600" />
+				</div>
+			</div>
+			</section>
+			<div id="nav">
+			<a href="beauty.html"><img src="images/health.jpg" alt="?" style="width:300px;height:200px" align="center"></a>
+			<a href="food.html"><img src="images/beauty.jpg" alt="?" style="width:300px;height:200px" align="center"></a>
+			<img src="images/spirit.jpg" alt="?" style="width:300px;height:200px" align="center">
+			<img src="images/favorites.jpg" alt="?" style="width:300px;height:200px" align="center">
+		</div>
+		<footer id="footer">
+				<h1>Created By Deborah Jimenez</h1>
+				</nav>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+
+			$(document).ready(function (){
+				
+				setTimeout(slide, 2000);
+
+			function slide() {
+					var fistImg = $("#horizontal .slides .drawer img:first");
+
+					fistImg.animate({"margin-left":"-600px"},1000, function (){
+						fistImg.appendTo("#horizontal .slides .drawer");
+						fistImg.css({"margin-left":"0px"});
+
+						setTimeout(slide, 2000);
+
+					});
+
+
+				}
+
+
+			});
+
+			</script>
+	</body>
+</html>
